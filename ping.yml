@@ -1,0 +1,5 @@
+---
+ - hosts: all
+   become: yes
+   tasks: 
+     - debug: msg='{{ansible_virtualization_type}}'
