@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+   - name: this is to install the multiple apps using loops
+     apt: 
+      name: "{{item}}"
+      state: present
+     with_items: 
+      - git
+      - tree
+      - wget
